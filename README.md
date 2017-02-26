@@ -14,9 +14,9 @@ An example of maintaining a WordPress project in a Git repository.
 # Sync w/ production server
 Suppose you're syncing with a production server. On production, new posts are made and images are uploaded all the time. Meanwhile, dev work is progressing within your local environment. Want to keep the two in sync?
 - Adding the following rewrite rule to your `.htaccess` will force your server to check for uploads (images, videos, etc) on your production server when they aren't found locally.
-```PHP
+```
 # BEGIN ProductionUploadRoutes
-SetEnv PROD http://yourserver.com
+SetEnv PROD http://yourserver.com /* Point this to your production server */
 <IfModule mod_rewrite.c>
   RewriteEngine on
 
